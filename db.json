@@ -1,0 +1,114 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "Email": "nerellamanojkumar@gmail.com",
+      "password": "Manoj",
+      "id": 3
+    },
+    {
+      "Email": "nerellamanojkumar@gmail.com",
+      "password": "Manoj",
+      "id": 4
+    },
+    {
+      "Email": "nerellamanojkumar@gmail.com",
+      "password": "Manoj",
+      "id": 5
+    },
+    {
+      "Email": "nerellamanojkumar@gmail.com",
+      "password": "Manoj",
+      "id": 6
+    },
+    {
+      "Email": "harini@gmail.com",
+      "password": "Manoj",
+      "id": 7
+    },
+    {
+      "Email": "harini@gmail.com",
+      "password": "Manoj",
+      "id": 8
+    },
+    {
+      "Email": "karthik@gmail.com",
+      "password": "karthik",
+      "id": 9
+    },
+    {
+      "Email": "karthik@gmail.com",
+      "password": "karthik",
+      "id": 10
+    },
+    {
+      "Email": "yahub@gmail.com",
+      "password": "yahub",
+      "id": 11
+    },
+    {
+      "Email": "yahub@gmail.com",
+      "password": "yahub",
+      "id": 12
+    },
+    {
+      "Email": "vamsi@gmail.com",
+      "password": "vamsi",
+      "id": 13
+    },
+    {
+      "Email": "karthik@gmail.com",
+      "password": "karthik",
+      "id": 14
+    },
+    {
+      "Email": "karthik@gmail.com",
+      "password": "karthik",
+      "id": 15
+    },
+    {
+      "Email": "vardhan@gmail.com",
+      "password": "vardhan",
+      "id": 16
+    },
+    {
+      "Email": "vardhan@gmail.com",
+      "password": "vardhan",
+      "id": 17
+    },
+    {
+      "Email": "anil@gmail.com",
+      "password": "anil",
+      "id": 18
+    },
+    {
+      "Email": "vardhan@gmail.com",
+      "password": "vardhan",
+      "id": 19
+    },
+    {
+      "Email": "vardhan@gmail.com",
+      "password": "vardhan",
+      "id": 20
+    },
+    {
+      "Email": "vardhan@gmail.com",
+      "password": "vardhan",
+      "id": 21
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

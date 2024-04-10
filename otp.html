@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OTP Login</title>
+	<link rel="stylesheet" href="emailotp.css">
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+    <style>
+        
+
+* {
+	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
+}
+body {
+    background-image: url('./AdobeStock_566075637_Preview.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.form {
+    width: 500px;
+    background-color: rgba(238, 238, 238, 0.5); /* Set background color with opacity */
+    padding: 0 30px;
+    display: grid;
+    gap: 40px;
+    padding-bottom: 50px;
+    backdrop-filter: blur(10px); /* Apply backdrop filter for blur effect */
+}
+
+
+input {
+	width: 100%;
+	padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px solid greenyellow;
+}
+.otpverify {
+	width: 100%;
+	display: flex;
+	gap: 20px;
+}
+.btn {
+	padding: 10px;
+	background-color:blue;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+	width: 150px;
+}
+.otpverify{
+	display: none;
+}
+
+    </style>
+</head>
+<body>
+	<div class="form">
+		<h1 style="color:hwb(0 1% 85%); font-size: 30px;"><i>OTP LOGIN</i></h1>
+		<input type="email" id="email" placeholder="Enter Email">
+		<div class="otpverify">
+			<input type="text" id="otp_inp" placeholder="Enter the OTP sent to your Email...">
+			<button class="btn" id="otp-btn">Verify</button>
+		</div>
+		<button class="btn" onclick="sendOTP()">Send OTP</button>
+		<h3 style="margin: 20px; justify-content: center; align-items: center; color:darkgreen;"> <i>please check Registered email  or in spam folder</i></h3>
+	</div>
+	<script>
+        function sendOTP() {
+	const email = document.getElementById('email');
+	const otpverify = document.getElementsByClassName('otpverify')[0];
+
+	if(email.value.trim() === ''){
+		alert('Please enter a valid email address!');
+		return;
+	}
+
+	let otp_val = Math.floor(Math.random() * 10000);
+
+	let emailbody = `<h2>Your OTP is </h2>${otp_val}`;
+	Email.send({
+    SecureToken : "3c1a0bb8-6078-4d2e-84c4-d77fb6c2cca6",
+    To : email.value,
+    From : "nerellakumarmanoj@gmail.com",
+    Subject : "Email OTP using JavaScript",
+    Body : emailbody,
+}).then(
+
+	message => {
+		if (message === "OK") {
+			alert("OTP sent to your email " + email.value);
+
+			otpverify.style.display = "flex";
+			const otp_inp = document.getElementById('otp_inp');
+			const otp_btn = document.getElementById('otp-btn');
+
+			otp_btn.addEventListener('click', () => {
+				if (otp_inp.value == otp_val) {
+					alert("Email address verified...");
+
+                    window.location.href="./index1.html"
+				}
+				else {
+					alert("Invalid OTP");
+				}
+			})
+		}
+	}
+);
+}
+    </script>
+</body>
+</html>
